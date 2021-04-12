@@ -18,7 +18,7 @@ export default class UploadImages extends Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount()  {
     UploadService.getFiles().then((response) => {
       this.setState({
         imageInfos: response.data,

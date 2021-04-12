@@ -13,7 +13,7 @@ class App extends React.Component{
         index:0,
         name:"",
         price:Number,
-        file: null,
+        image: "",
         action:"ADD PRODUCT",//default ADD ITEM
         items:[
           { name: "Iphone8", price: 777, img: <img src ={window.location.origin + '/images/iphonexs-max.png'} alt={"anh1"}  />},
@@ -37,7 +37,7 @@ class App extends React.Component{
   }
   handleChange(event) {
     this.setState({
-      file: URL.createObjectURL(event.target.files[0])
+      image: URL.createObjectURL(event.target.files[0])
     })
   }
 
@@ -50,7 +50,7 @@ class App extends React.Component{
           ],
           name:"",
           price:"",
-          image:'files',
+          image:'',
         })
       }
   }
@@ -107,6 +107,7 @@ class App extends React.Component{
                 </div>
                 <div className="content">
                   <UploadImages />
+                  </div>
       </div>
 
             </div>
@@ -141,7 +142,7 @@ class App extends React.Component{
                 </table>
             </div> 
           </div>
-      </div>
+      
     );
   }
 }
